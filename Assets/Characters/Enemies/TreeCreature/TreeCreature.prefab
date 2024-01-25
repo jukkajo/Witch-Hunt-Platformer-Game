@@ -234,6 +234,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  touchCollider: {fileID: 0}
   surfaceClearance: 0.05
   wallClearance: 0.5
   ceilingClearance: 0.05

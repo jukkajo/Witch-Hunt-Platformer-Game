@@ -21,4 +21,5 @@ internal class AnimationStrings
     internal static string hit = "hit";
     internal static string haltVelocity = "haltVelocity";
     internal static string distanceAttack = "distanceAttack";
+    internal static string playerNearby = "playerNearby";
 }

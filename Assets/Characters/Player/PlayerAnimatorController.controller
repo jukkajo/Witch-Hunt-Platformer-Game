@@ -135,7 +135,6 @@ MonoBehaviour:
   playAfterDelay: 0
   playAtStateEnter: 1
   playWhenExit: 0
-  playContinuously: 0
   delay: 0.4
 --- !u!1101 &-7246347296961442823
 AnimatorStateTransition:
@@ -1189,7 +1188,6 @@ MonoBehaviour:
   playAfterDelay: 1
   playAtStateEnter: 1
   playWhenExit: 0
-  playContinuously: 0
   delay: 0.15
 --- !u!1102 &2748083645972118949
 AnimatorState:
