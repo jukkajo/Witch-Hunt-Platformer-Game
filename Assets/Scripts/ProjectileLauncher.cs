@@ -12,7 +12,6 @@ public class ProjectileLauncher : MonoBehaviour
     {
         GameObject projectile = Instantiate(projectilePref, launchLocation.position, Quaternion.identity);
 
-        // Apply initial scale based on launcher's scale
         Vector3 scale = projectile.transform.localScale;
         projectile.transform.localScale = new Vector3(
             scale.x * transform.localScale.x > 0 ? 1 : -1,
@@ -20,8 +19,6 @@ public class ProjectileLauncher : MonoBehaviour
             scale.z
         );
 
-
-        //projectile.GetComponent<Rigidbody2D>().angularVelocity = -rotationSpeed * (transform.localScale.x > 0 ? 1 : -1);
     }
 }
 

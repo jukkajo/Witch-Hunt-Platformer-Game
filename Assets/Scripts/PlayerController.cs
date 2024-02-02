@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     public float airWalkSpeed = 1f;
     TouchingDirections touchingDirections;
     DamageElement damageElement;
+    HealthBar healthBar;
+    Rigidbody2D rb;
+    Animator animator;
+    
     public float movementSpeed {
         get {
                 if (AllowMovement) {
@@ -98,30 +102,28 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    Rigidbody2D rb;
-    Animator animator;
-
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingDirections = GetComponent<TouchingDirections>();
         damageElement = GetComponent<DamageElement>();
         
+        /*------- One entity -------- */
+        GameObject healthBarObject = GameObject.FindWithTag("HealthBarPlayer");
+        if (healthBarObject != null) {
+            HealthBar healthBarComponent = healthBarObject.GetComponent<HealthBar>();
+            if (healthBarComponent != null)
+            {
+                healthBar = healthBarComponent;
+            } else {
+                Debug.LogError("HealthBar component not found on the GameObject with tag 'HealthBarPlayer'");
+            }
+         }
+        /*----------------------------*/
+        
         // Set initial values
         animator.SetBool(AnimationStrings.inMovement, false);
         animator.SetBool(AnimationStrings.running, false);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void FixedUpdate() {
@@ -190,9 +192,9 @@ public class PlayerController : MonoBehaviour
     
 
     public void OnHit(int reduceByNumber, Vector2 moveBackwards) {
-        
-        //HaltVelocity = true;
+        if (healthBar != null) {
+            healthBar.spriteChange();
+        }
         rb.velocity = new Vector2(moveBackwards.x, rb.velocity.y + moveBackwards.y);
     }
-    
 }

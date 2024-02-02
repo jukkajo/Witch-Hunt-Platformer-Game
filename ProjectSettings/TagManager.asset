@@ -3,7 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - HealthBar
+  - HealthBarPlayer
+  - HealthBarTreeCreature
+  - HealthBarTreeCreature2
+  - HealthBarTreeCreature3
+  - TreeCreature
+  - TreeCreature2
+  - TreeCreature3
+  - HealthBarGoblin3
+  - HealthBarGoblin2
+  - HealthBarGoblin
+  - Goblin
+  - Goblin2
+  - Goblin3
+  - PlayerPointsBar
   layers:
   - Default
   - TransparentFX

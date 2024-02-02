@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(DamageElement))]
 public class treeCreature : MonoBehaviour
@@ -10,19 +11,15 @@ public class treeCreature : MonoBehaviour
     DamageElement damageElement;
     
     public enum WalkingDirection { Right, Left }
-    
     private  WalkingDirection _walkDirection;
-    
     private  Vector2 walkDirectionVector = Vector2.right;
-    
     TouchingDirections touchingDirections;
-    
     public DetectionArea attackArea;
     public DetectionArea groundDetectionArea;
-     
     Animator animator;
-    
     private float walkingSpeedReducerRate = 0.02f;
+    HealthBar healthBar;
+    public string healthBarName = "TODO: Change";
     
     public  WalkingDirection WalkDirection {
         get {
@@ -66,6 +63,9 @@ public class treeCreature : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.SetBool(AnimationStrings.allowMovement, true); 
         damageElement = GetComponent<DamageElement>();
+        if (healthBarName != "TODO: Change") {
+            healthBar = GameObject.FindWithTag(healthBarName).GetComponent<HealthBar>();
+        }
     }
     
     void Update()
@@ -124,26 +124,7 @@ public class treeCreature : MonoBehaviour
     }
     
     public void OnHit(int reduceByNumber, Vector2 moveBackwards) {
-        
-        // HaltVelocity = true;
+        healthBar.spriteChange();
         rb.velocity = new Vector2(moveBackwards.x, rb.velocity.y + moveBackwards.y);
     }
-    /*
-    private void ChangeDirection() {
-        
-        switch(WalkDirection)
-        {
-            case WalkingDirection.Right:
-                WalkDirection = WalkingDirection.Left;
-                break;
-            case WalkingDirection.Left:
-                WalkDirection = WalkingDirection.Right;
-                break;
-            default:
-                Debug.LogError("TreeCreatures walking direction is not set correctly :(");
-                break;
-        }
-        
-    }
-    */
 }

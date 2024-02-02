@@ -263,6 +263,7 @@ MonoBehaviour:
   _startHealth: 100
   _health: 100
   canNotHarmTime: 0.2
+  healthBarName: 'TODO: Change'
   canNotHarm: 0
   _isAlive: 1
 --- !u!114 &285737844329980522
@@ -445,6 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d192f257c51b876aea3f722679b4e8bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerCash: 0
 --- !u!1 &5409733453711109645
 GameObject:
   m_ObjectHideFlags: 0
