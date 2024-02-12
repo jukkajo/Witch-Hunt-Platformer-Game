@@ -6,19 +6,11 @@ TagManager:
   tags:
   - HealthBar
   - HealthBarPlayer
-  - HealthBarTreeCreature
-  - HealthBarTreeCreature2
-  - HealthBarTreeCreature3
-  - TreeCreature
-  - TreeCreature2
-  - TreeCreature3
-  - HealthBarGoblin3
-  - HealthBarGoblin2
-  - HealthBarGoblin
-  - Goblin
-  - Goblin2
-  - Goblin3
   - PlayerPointsBar
+  - HealthBarArab
+  - Arab
+  - Mummy
+  - HealthBarMummy
   layers:
   - Default
   - TransparentFX

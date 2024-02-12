@@ -11,8 +11,8 @@ public class treeCreature : MonoBehaviour
     DamageElement damageElement;
     
     public enum WalkingDirection { Right, Left }
-    private  WalkingDirection _walkDirection;
-    private  Vector2 walkDirectionVector = Vector2.right;
+    private WalkingDirection _walkDirection;
+    private Vector2 walkDirectionVector = Vector2.right;
     TouchingDirections touchingDirections;
     public DetectionArea attackArea;
     public DetectionArea groundDetectionArea;
@@ -20,7 +20,10 @@ public class treeCreature : MonoBehaviour
     private float walkingSpeedReducerRate = 0.02f;
     HealthBar healthBar;
     public string healthBarName = "TODO: Change";
-    
+    public string changeWalkingDirToLeft = "TODO: Change to 'True'";
+    public string changeFacingDir = "TODO: Change to 'True'";
+    public bool _hasTarget = false;
+
     public  WalkingDirection WalkDirection {
         get {
             return _walkDirection;
@@ -39,8 +42,6 @@ public class treeCreature : MonoBehaviour
             _walkDirection = value;
         }
     }
-    
-    public bool _hasTarget = false;
     
     public bool HasTarget { get { return _hasTarget; } private set {
     
@@ -65,6 +66,14 @@ public class treeCreature : MonoBehaviour
         damageElement = GetComponent<DamageElement>();
         if (healthBarName != "TODO: Change") {
             healthBar = GameObject.FindWithTag(healthBarName).GetComponent<HealthBar>();
+        }
+        
+        if (changeWalkingDirToLeft != "TODO: Change to 'True'" && changeWalkingDirToLeft == "True") {
+            ChangeDirection();
+        }
+        
+        if (changeFacingDir != "TODO: Change to 'True'" && changeWalkingDirToLeft == "True") {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
     }
     

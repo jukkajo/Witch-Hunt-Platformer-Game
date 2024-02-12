@@ -7597,7 +7597,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 349.8, y: -2.99, z: -9.05}
+  m_LocalPosition: {x: -8.93, y: -2.99, z: -9.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8006,7 +8006,7 @@ Transform:
   m_GameObject: {fileID: 554072534}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.7, z: 0}
+  m_LocalPosition: {x: -186.09497, y: 3.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12604,7 +12604,7 @@ Transform:
   m_GameObject: {fileID: 1283347743}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 349.8, y: -2.99, z: -9.05}
+  m_LocalPosition: {x: -8.93, y: -2.99, z: -9.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13796,7 +13796,7 @@ Transform:
   m_GameObject: {fileID: 1548194103}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.37, z: 0}
+  m_LocalPosition: {x: -159.51001, y: 0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14147,7 +14147,7 @@ Transform:
   m_GameObject: {fileID: 1727809515}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.37, z: 0}
+  m_LocalPosition: {x: -26.585003, y: 0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15438,7 +15438,7 @@ Transform:
   m_GameObject: {fileID: 1798292572}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.37, z: 0}
+  m_LocalPosition: {x: -106.34001, y: 0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15962,7 +15962,7 @@ Transform:
   m_GameObject: {fileID: 1848368818}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 71.088, y: 0.37, z: 0}
+  m_LocalPosition: {x: 124.258, y: 0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16434,10 +16434,6 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 845889049}
-    - target: {fileID: 1448592030315489555, guid: 0bfa50520d6d29e019a740ea836a2c87, type: 3}
-      propertyPath: treasureText
-      value: 
-      objectReference: {fileID: 1019467248882145251, guid: 80fef222496876803bfae57caeb28db2, type: 3}
     - target: {fileID: 5172686822797350072, guid: 0bfa50520d6d29e019a740ea836a2c87, type: 3}
       propertyPath: m_Name
       value: TextManager
@@ -17334,7 +17330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8159062802230683171, guid: b00bb267c34819d80b13eeb881c03ada, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 349.8
+      value: -8.93
       objectReference: {fileID: 0}
     - target: {fileID: 8159062802230683171, guid: b00bb267c34819d80b13eeb881c03ada, type: 3}
       propertyPath: m_LocalPosition.y
