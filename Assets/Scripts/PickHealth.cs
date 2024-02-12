@@ -16,13 +16,9 @@ public class PickHealth : MonoBehaviour
         if (element) {
            element.RestoreHealth(increaseBy);
         }
-        
-        //GameObject playerObject = GameObject.FindWithTag("Player");
-        //if (playerObject != null)
-        //{
-           //playerAnimator = playerObject.GetComponent<Animator>();
-           AudioSource.PlayClipAtPoint(pickUpSound, gameObject.transform.position, volumeLevel);
-        //}
+
+        AudioSource.PlayClipAtPoint(pickUpSound, gameObject.transform.position, volumeLevel);
+
         Destroy(gameObject);
     }
     

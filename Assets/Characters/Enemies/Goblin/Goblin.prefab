@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1821042289081737867}
   - component: {fileID: 7826451797189814957}
   - component: {fileID: 5039864399285741109}
+  - component: {fileID: 3610891338829723143}
   m_Layer: 7
   m_Name: Goblin
   m_TagString: Untagged
@@ -256,7 +257,23 @@ MonoBehaviour:
   walkSpeed: 2
   attackArea: {fileID: 5492230679145445029}
   groundDetectionArea: {fileID: 9126992731350767046}
+  healthBarName: 'TODO: Change'
   _hasTarget: 0
+--- !u!114 &3610891338829723143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110336546302274888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df6d4533e1558d0b93cc31badc9fa99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 2841312555296871741}
+  offset: {x: 0, y: 1, z: 0}
+  imageComponent: {fileID: 0}
 --- !u!1 &2289441970712072466
 GameObject:
   m_ObjectHideFlags: 0

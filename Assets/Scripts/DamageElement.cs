@@ -8,16 +8,18 @@ public class DamageElement : MonoBehaviour
     // int for damage, and Vector for backwards movement
     public UnityEvent<int, Vector2> damageElementHit;
     Animator animator;
+    HealthBar healthBar;
 
     [SerializeField]
     private int _startHealth = 100;
 
     [SerializeField]
-    private int _health = 100;
+    public int _health = 100;
     
     // 0.2 Seconds
     public float canNotHarmTime = 0.2f;
     private float timeAfterLastHit = 0;
+    public string healthBarName = "TODO: Change";
     
     public int StartHealth { get { return _startHealth; }
         set { _startHealth = value; }
@@ -60,7 +62,9 @@ public class DamageElement : MonoBehaviour
                 Events.damageHealed(gameObject, restoreBy);
                 Health = _startHealth;
             }
-
+            if (healthBar != null) { 
+                healthBar.spriteChange();
+            }
         }
     }
 
@@ -77,6 +81,9 @@ public class DamageElement : MonoBehaviour
     
     private void Awake() {
         animator = GetComponent<Animator>();
+        if (healthBarName != "TODO: Change") { 
+           healthBar = GameObject.FindWithTag(healthBarName).GetComponent<HealthBar>();
+        }
     }
     
     public bool HaltVelocity {

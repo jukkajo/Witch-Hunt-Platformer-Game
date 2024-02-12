@@ -35,6 +35,14 @@ public class removeObjectBehavior : StateMachineBehaviour
            Debug.Log(elapsedTime + "  and  " + fadingTime);
            if (elapsedTime > fadingTime) {
                Destroy(removeTarget);
+               
+               if (removeTarget.GetComponent<DamageElement>())
+               {
+                   string removableHealthBarName = removeTarget.GetComponent<DamageElement>().healthBarName;
+                   GameObject healthBar = GameObject.FindWithTag(removableHealthBarName);
+                   Destroy(healthBar);
+               }
+
            }   
        }
     }
