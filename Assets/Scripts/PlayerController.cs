@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 5f;
     public float idleSpeed = 0f;
     public float airWalkSpeed = 1f;
+    public float acceleration = 10f;
     TouchingDirections touchingDirections;
     DamageElement damageElement;
     public float movementSpeed {
@@ -125,13 +126,19 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if (!damageElement.HaltVelocity) {
-            rb.velocity = new Vector2(moveInput.x * movementSpeed, rb.velocity.y);
+        if (!damageElement.HaltVelocity)
+        {
+            float targetVelocityX = moveInput.x * movementSpeed;
+            float accelerationX = acceleration * Time.fixedDeltaTime;
+
+            // Apply acceleration to reach the target velocity
+            rb.velocity = Vector2.MoveTowards(rb.velocity, new Vector2(targetVelocityX, rb.velocity.y), accelerationX);
+
+            animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
         }
-        animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
-       
+
     }
-    
+
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
