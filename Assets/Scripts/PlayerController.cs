@@ -127,7 +127,8 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(AnimationStrings.running, false);
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate()
+    {
         if (!damageElement.HaltVelocity)
         {
             float targetVelocityX = moveInput.x * movementSpeed;
