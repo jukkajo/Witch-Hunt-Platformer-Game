@@ -49,7 +49,7 @@ public class PointsElement : MonoBehaviour
             PlayerCash = 100 * rangeScaleUpFactor;
         }
         spriteChange();
-        //Events.treasurePicked(gameObject, increaseBy);
+        Events.treasurePicked(gameObject, increaseBy);
     }
 
     public void spriteChange()

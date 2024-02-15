@@ -37,6 +37,7 @@ public class FlyingCreature : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         element = GetComponent<DamageElement>();
+        ChangeDirection();
     }
     
     // Start is called before the first frame update
@@ -82,24 +83,20 @@ public class FlyingCreature : MonoBehaviour
     }
     
     
-    private void ChangeDirection()
+private void ChangeDirection()
+{
+    if (rb.velocity.x > 0)
     {
-
-        if(transform.localScale.x > 0)
-        {
-            // Currently facing right
-            if(rb.velocity.x < 0)
-            {
-                transform.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
-            }
-        }
-        else {
-            if (rb.velocity.x > 0)
-            {
-                transform.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
-            }
-        }
+        // Moving left, flip to face left
+        transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
+    else if (rb.velocity.x < 0)
+    {
+        // Moving right, flip to face right
+        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+    }
+}
+
     
     public void deathSequence()
     {

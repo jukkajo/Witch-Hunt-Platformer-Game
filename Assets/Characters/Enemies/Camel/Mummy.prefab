@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7826451797189814957}
   - component: {fileID: 5039864399285741109}
   - component: {fileID: 6466965732750125138}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Mummy
   m_TagString: Mummy
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ MonoBehaviour:
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 64
     minDepth: 0
     maxDepth: 0
     minNormalAngle: 0
