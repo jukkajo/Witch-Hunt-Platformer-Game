@@ -9,6 +9,7 @@ public class DamageElement : MonoBehaviour
     public UnityEvent<int, Vector2> damageElementHit;
     Animator animator;
     HealthBar healthBar;
+    public UnityEvent Death;
 
     [SerializeField]
     private int _startHealth = 100;
@@ -37,6 +38,10 @@ public class DamageElement : MonoBehaviour
         set {
             _isAlive = value;
             animator.SetBool(AnimationStrings.isAlive, value);
+            if(value == false)
+            {
+                Death.Invoke();
+            }
         }
     }
     

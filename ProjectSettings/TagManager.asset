@@ -11,6 +11,16 @@ TagManager:
   - Arab
   - Mummy
   - HealthBarMummy
+  - HealthBarMummy2
+  - Mummy2
+  - Arab2
+  - Arab3
+  - HealthBarArab2
+  - HealthBarArab3
+  - Skeleton
+  - HealthBarSkeleton
+  - HealthBarSkeleton2
+  - Skeleton2
   layers:
   - Default
   - TransparentFX
