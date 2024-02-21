@@ -17,9 +17,9 @@ GameObject:
   - component: {fileID: 7826451797189814957}
   - component: {fileID: 5039864399285741109}
   - component: {fileID: 3610891338829723143}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Skeleton
-  m_TagString: Untagged
+  m_TagString: Skeleton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: a5c34931f822aff5c8455bceafc7c29c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -153,8 +153,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009321928, y: -0.07457554}
-  m_Size: {x: 1.0074301, y: 1.7904718}
+  m_Offset: {x: -1.0334555, y: -1.1353606}
+  m_Size: {x: 1.268088, y: 3.628594}
   m_Direction: 0
 --- !u!95 &9005141282587378100
 Animator:
@@ -166,7 +166,7 @@ Animator:
   m_GameObject: {fileID: 110336546302274888}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a707a9d5c90f77949844c0e073f45460, type: 2}
+  m_Controller: {fileID: 9100000, guid: cc05482ee2ca5d239886e7267e10482c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   _startHealth: 100
   _health: 100
   canNotHarmTime: 0.2
-  healthBarName: 'TODO: Change'
+  healthBarName: HealthBarSkeleton
   canNotHarm: 0
   _isAlive: 1
 --- !u!114 &7826451797189814957
@@ -258,7 +258,7 @@ MonoBehaviour:
   walkSpeed: 2
   attackArea: {fileID: 5492230679145445029}
   groundDetectionArea: {fileID: 9126992731350767046}
-  healthBarName: 'TODO: Change'
+  healthBarName: HealthBarSkeleton
   changeWalkingDirToLeft: 'TODO: Change to ''True'''
   changeFacingDir: 'TODO: Change to ''True'''
   _hasTarget: 0
@@ -304,7 +304,7 @@ Transform:
   m_GameObject: {fileID: 2289441970712072466}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.29, y: -1.25, z: 0}
+  m_LocalPosition: {x: 0.94, y: -3.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -395,7 +395,7 @@ Transform:
   m_GameObject: {fileID: 4272857674745554432}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 0, z: 0}
+  m_LocalPosition: {x: -0.23, y: -3.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -433,7 +433,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.6760497, y: 0.033878326}
+  m_Offset: {x: 1.2207159, y: 2.3022501}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -444,7 +444,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3306131, y: 1.3833117}
+  m_Size: {x: 2.0459588, y: 3.4235253}
   m_EdgeRadius: 0
 --- !u!114 &5492230679145445029
 MonoBehaviour:
@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 2362521846197387837}
   - component: {fileID: 7978083927466251420}
   m_Layer: 10
-  m_Name: TreeCreatureAttack
+  m_Name: SkeletonAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -536,15 +536,17 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.349396, y: 0.06322944}
-      - {x: 0.8444204, y: 0.7439461}
-      - {x: 0.5030966, y: 0.5925069}
-      - {x: 0.35005742, y: 0.2831036}
-      - {x: 0.51667047, y: -0.56622934}
-      - {x: 0.5964265, y: -0.6026962}
-      - {x: 0.81601274, y: -0.5819826}
-      - {x: 1.1192575, y: -0.5042274}
-      - {x: 1.2890754, y: -0.23701793}
+    - - {x: 0.9280181, y: -2.3526201}
+      - {x: 1.4756098, y: -2.417635}
+      - {x: 1.4645426, y: -1.8361461}
+      - {x: 1.2561749, y: -1.1814555}
+      - {x: 0.8941031, y: -0.4980979}
+      - {x: 0.17780459, y: 0.29815963}
+      - {x: -0.3461581, y: 0.5126387}
+      - {x: -1.0088922, y: 0.30838275}
+      - {x: -0.6635777, y: -0.006590843}
+      - {x: 0.12947631, y: -0.6432266}
+      - {x: 0.7311535, y: -1.5272578}
   m_UseDelaunayMesh: 0
 --- !u!114 &7978083927466251420
 MonoBehaviour:
@@ -558,5 +560,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88f9591c0e017b9c9cab62a740f2e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerAttack: 8
-  knock: {x: 0, y: 0}
+  damagePerAttack: 15
+  knock: {x: 5, y: 0}

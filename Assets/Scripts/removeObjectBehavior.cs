@@ -24,12 +24,14 @@ public class removeObjectBehavior : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       Debug.Log("Entered");
+
        if (fadingDelay > elapsedFadingDelay) {
+           Debug.Log("IF");
            elapsedFadingDelay += Time.deltaTime;
-       } else {    
+       } else {
+           Debug.Log("ELSE");
            elapsedTime += Time.deltaTime;
-           float updateAlpha = spriteColorStart.a * (1 - elapsedTime / fadingTime);
+           float updateAlpha = spriteColorStart.a * (1 - (elapsedTime / fadingTime));
        
            spriteRenderer.color = new Color(spriteColorStart.r, spriteColorStart.g, spriteColorStart.b, updateAlpha);
            Debug.Log(elapsedTime + "  and  " + fadingTime);
@@ -46,5 +48,5 @@ public class removeObjectBehavior : StateMachineBehaviour
            }   
        }
     }
-
+    
 }
