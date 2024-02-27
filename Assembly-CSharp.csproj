@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\FlyingCreature.cs" />
     <Compile Include="Assets\Scripts\allowMovement.cs" />
     <Compile Include="Assets\Scripts\ParallaxBackground.cs.cs" />
+    <Compile Include="Assets\DeploySkeletons.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\TreasurePickup.cs" />
     <Compile Include="Assets\Scripts\TextManager.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\Scripts\ParallaxLayer.cs.cs" />
     <Compile Include="Assets\Scripts\Events.cs" />
     <Compile Include="Assets\NPC.cs" />
+    <Compile Include="Assets\FlyingObjectGroundHit.cs" />
     <Compile Include="Assets\Scripts\InGameMenu.cs" />
     <Compile Include="Assets\Scripts\RollingStone.cs" />
     <Compile Include="Assets\Scripts\StateMachiine\SetBooleanBehavior.cs" />
