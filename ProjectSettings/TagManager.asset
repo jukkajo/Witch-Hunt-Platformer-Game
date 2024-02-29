@@ -21,6 +21,21 @@ TagManager:
   - HealthBarSkeleton
   - HealthBarSkeleton2
   - Skeleton2
+  - Ladder
+  - HealthBarTreeCreature2
+  - HealthBarGoblin3
+  - HealthBarGoblin2
+  - HealthBarGoblin
+  - HealthBarTreeCreature
+  - HealthBarTreeCreature3
+  - Goblin2
+  - TreeCreature3
+  - Goblin3
+  - Goblin
+  - TreeCreature2
+  - TreeCreature
+  - Skeleton3
+  - HealthBarSkeleton3
   layers:
   - Default
   - TransparentFX
