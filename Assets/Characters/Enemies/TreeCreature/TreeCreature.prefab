@@ -205,9 +205,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  Death:
+    m_PersistentCalls:
+      m_Calls: []
   _startHealth: 100
   _health: 100
   canNotHarmTime: 0.2
+  healthBarName: 'TODO: Change'
   canNotHarm: 0
   _isAlive: 1
 --- !u!114 &7826451797189814957
@@ -258,6 +262,9 @@ MonoBehaviour:
   walkSpeed: 2
   attackArea: {fileID: 5492230679145445029}
   groundDetectionArea: {fileID: 9126992731350767046}
+  healthBarName: 'TODO: Change'
+  changeWalkingDirToLeft: 'TODO: Change to ''True'''
+  changeFacingDir: 'TODO: Change to ''True'''
   _hasTarget: 0
 --- !u!114 &6466965732750125138
 MonoBehaviour:
@@ -301,7 +308,7 @@ Transform:
   m_GameObject: {fileID: 2289441970712072466}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.29, y: -1.25, z: 0}
+  m_LocalPosition: {x: 0.54, y: -1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -339,7 +346,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.23701859, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -350,7 +357,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5259628, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &9126992731350767046
 MonoBehaviour:
@@ -453,6 +460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f87f4ac6edb3ee8b0da62b2b075cf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  assignTag: 'TODO: Change'
+  followTargetName: 'TODO: Change'
   healthMax: {fileID: -1911973027, guid: 03aea178ee89b3d34a906051b017c7db, type: 3}
   health80: {fileID: -1766690966, guid: 03aea178ee89b3d34a906051b017c7db, type: 3}
   health60: {fileID: 902247885, guid: 03aea178ee89b3d34a906051b017c7db, type: 3}

@@ -103,5 +103,6 @@ private void ChangeDirection()
         rb.gravityScale = 2f;
         rb.velocity = new Vector2(0, rb.velocity.y);
         fallCollider.enabled = true;
+        
     }
 }

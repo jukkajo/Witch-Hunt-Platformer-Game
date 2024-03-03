@@ -22,4 +22,7 @@ internal class AnimationStrings
     internal static string haltVelocity = "haltVelocity";
     internal static string distanceAttack = "distanceAttack";
     internal static string playerNearby = "playerNearby";
+    internal static string playerEnter = "playerEnter";
+    internal static string airAttack = "airAttack";
+    internal static string wormTrigger = "wormTrigger";
 }
