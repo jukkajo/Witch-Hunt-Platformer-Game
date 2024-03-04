@@ -173,6 +173,7 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Ladder"))
         {
             isLadder = true;
+            Climbing = true;
             rb.gravityScale = 0;
         }
     }
@@ -182,6 +183,7 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Ladder"))
         {
             isLadder = false;
+            Climbing = false;
             rb.gravityScale = 1;
         }
     }
