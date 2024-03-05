@@ -11,8 +11,12 @@ public class removeObjectBehavior : StateMachineBehaviour
 
     GameObject removeTarget;
     Color spriteColorStart;
+    DeathMenu deathMenu;
     
     SpriteRenderer spriteRenderer;
+    void Awake() {
+        deathMenu = GameObject.Find("DeathMenu").GetComponent<DeathMenu>();
+    }
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -36,6 +40,11 @@ public class removeObjectBehavior : StateMachineBehaviour
            spriteRenderer.color = new Color(spriteColorStart.r, spriteColorStart.g, spriteColorStart.b, updateAlpha);
            Debug.Log(elapsedTime + "  and  " + fadingTime);
            if (elapsedTime > fadingTime) {
+               
+               
+               if (removeTarget.name == "Player") {
+                   deathMenu.OnPlayerDeath();
+               }
                Destroy(removeTarget);
                
                if (removeTarget.GetComponent<DamageElement>())

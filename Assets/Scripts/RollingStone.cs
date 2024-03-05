@@ -10,15 +10,20 @@ public class RollingStone : MonoBehaviour
     private float lastXPosition;
     public Vector2 knock = new Vector2(5, 4);
     private System.Type colliderType;
+    public AudioClip effect;
 
     Vector3 rotationSpeed = new Vector3(0, 0, 90);
     TouchingDirections touchingDirections;
     Rigidbody2D rb;
+    AudioSource audioSource;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         touchingDirections = GetComponent<TouchingDirections>();
+        audioSource = GetComponent<AudioSource>();
+        audioSource.loop = true;
+        audioSource.volume = 0.5f;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -32,6 +37,7 @@ public class RollingStone : MonoBehaviour
 
     IEnumerator MoveStone()
     {
+        audioSource.PlayOneShot(effect); 
         while (true)
         {
             if (touchingDirections.Surfaced)
@@ -51,9 +57,14 @@ public class RollingStone : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
+        // Exit if the object is already destroyed
+        if (rb == null)
+        {
+            yield break;
+        }
+
         if (Mathf.Approximately(lastXPosition, rb.position.x) && touchingDirections.OnWall)
         {
-            // The position has not changed in 1 second, and the object is on a wall
             Destroy(gameObject);
         }
 
@@ -68,6 +79,11 @@ public class RollingStone : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+    
+    private void OnDestroy()
+    {
+        audioSource.Stop();
     }
 }
 

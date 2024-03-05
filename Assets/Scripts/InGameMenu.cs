@@ -9,39 +9,56 @@ public class InGameMenu : MonoBehaviour
     public GameObject inGameMenu;
     public bool isPaused; 
     
-    void Start() {
-       // inGameMenu = GetComponent<PauseMenu>();
+    void Start()
+    {
         inGameMenu.SetActive(false);
-    } 
+    }
     
-    void Update() {
-        if(Input.GetKeyDown(KeyCode.P)) {
-            if (isPaused) {
-                Resume();
-            } else {
-                PauseGame();
-            }
+private bool isPKeyPressed = false;
+
+void Update() {
+    if (Input.GetKeyDown(KeyCode.P) && !isPKeyPressed) {
+        isPKeyPressed = true;
+
+        if (isPaused) {
+            Resume();
+        } else {
+            PauseGame();
         }
     }
+
+    if (Input.GetKeyUp(KeyCode.P)) {
+        isPKeyPressed = false;
+    }
+}
 
     public void PauseGame() {
         inGameMenu.SetActive(true);
         Time.timeScale = 0f;
-        isPaused = true;
     }
 
     public void Resume() {
         inGameMenu.SetActive(false);
         Time.timeScale = 1f;
-        isPaused = false;
     }
 
     public void ReturnToMainMenu() {
-       //SceneManager.LoadScene(SceneManager.GetActiveScene().build);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
     }
     
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void Options() {
     //
     }
     
+    // Shows controls
+    public void Help() {
+        //
+    }
 }

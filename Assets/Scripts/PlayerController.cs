@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 5f;
     public float idleSpeed = 0f;
     public float airWalkSpeed = 1f;
+    //public int lastCheckpoint = 0;
     public float acceleration = 10f;
     private bool isLadder;
     TouchingDirections touchingDirections;
@@ -139,6 +140,15 @@ public class PlayerController : MonoBehaviour
         // Set initial values
         animator.SetBool(AnimationStrings.inMovement, false);
         animator.SetBool(AnimationStrings.running, false);
+        
+        // Check for PlayerRefs, and position player accordingly
+        float playerX = PlayerPrefs.GetFloat("PlayerX", 0f );
+        
+        float playerY = PlayerPrefs.GetFloat("PlayerY", 0f);
+        if (!float.IsNaN(playerX) && !float.IsNaN(playerY)) {
+            //Transform playerTransform = transform.parent;
+            transform.position = new Vector3(playerX, playerY, transform.position.z);   
+        }
     }
 
     private void FixedUpdate()
@@ -243,7 +253,13 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger(AnimationStrings.distanceAttack);
         }
     }
-    
+
+    public void OnAirAttack(InputAction.CallbackContext context)
+    {
+        if (context.started) {
+            animator.SetTrigger(AnimationStrings.airAttack);
+        }
+    }
 
     public void OnHit(int reduceByNumber, Vector2 moveBackwards) {
         if (healthBar != null) {

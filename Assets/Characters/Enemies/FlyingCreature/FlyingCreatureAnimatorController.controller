@@ -105,11 +105,10 @@ AnimatorState:
   m_PrefabAsset: {fileID: 0}
   m_Name: FlyingCreatureDeath
   m_Speed: 1
-  m_CycleOffset: 0
+  m_CycleOffset: 1
   m_Transitions: []
   m_StateMachineBehaviours:
-  - {fileID: 1445216534056571267}
-  - {fileID: 6983379117168773916}
+  - {fileID: 184757584237194877}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -277,6 +276,20 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!114 &184757584237194877
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b28384d25208d2bebcb93fc60679264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadingTime: 0.75
+  fadingDelay: 0
 --- !u!1101 &581253505446892105
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -302,20 +315,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!114 &1445216534056571267
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b28384d25208d2bebcb93fc60679264, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadingTime: 0.45
-  fadingDelay: 0.45
 --- !u!1102 &3043524851962007389
 AnimatorState:
   serializedVersion: 6
@@ -378,24 +377,6 @@ MonoBehaviour:
   valueOnExit: 1
   updateOnStateMachine: 1
   updateOnState: 0
---- !u!114 &6983379117168773916
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474f3402b6a23e00e87b9d105869fb64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effect: {fileID: 8300000, guid: 3b35169bd424ab90bb969ed83018b01d, type: 3}
-  volumeLevel: 0.5
-  playAfterDelay: 0
-  playAtStateEnter: 1
-  playWhenExit: 0
-  delay: 0.4
 --- !u!1101 &8707340537285870067
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
