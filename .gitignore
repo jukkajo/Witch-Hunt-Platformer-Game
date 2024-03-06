@@ -1,0 +1,10 @@
+.vs/
+.vsconfig
+Build/
+Library/
+Logs/
+Temp/
+ProjectSettings/
+UpgradeLog.htm
+obj/
+

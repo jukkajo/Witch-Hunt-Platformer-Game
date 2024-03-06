@@ -13,6 +13,8 @@ public class treeCreature : MonoBehaviour
     public enum WalkingDirection { Right, Left }
     private WalkingDirection _walkDirection;
     private Vector2 walkDirectionVector = Vector2.right;
+    private float directionChangeTimer = 0f;
+    public float directionChangeDelay = 1.5f;
     TouchingDirections touchingDirections;
     public DetectionArea attackArea;
     public DetectionArea groundDetectionArea;
@@ -100,16 +102,32 @@ public class treeCreature : MonoBehaviour
     }
     
     private void FixedUpdate() {
-        
-        if (touchingDirections.Surfaced && touchingDirections.OnWall) {
 
-            ChangeDirection();
-        } else if (touchingDirections.Surfaced && groundDetectionArea.detectedColliders.Count == 0) {
-            ChangeDirection();
+        // Increment the direction change timer
+        directionChangeTimer += Time.fixedDeltaTime;
+
+        if (touchingDirections.Surfaced && !touchingDirections.OnWall)
+        {
+            if (AllowMovement)
+            {
+                rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkingSpeedReducerRate), rb.velocity.y);
+            }
         }
-        
-        
-        if(!damageElement.HaltVelocity) {
+        else if (!touchingDirections.Surfaced || touchingDirections.OnWall)
+        {
+            // Check if enough time has passed since the last direction change
+            if (directionChangeTimer >= directionChangeDelay)
+            {
+                ChangeDirection();
+                directionChangeTimer = 0f; // Reset the timer
+            }
+        }
+
+        if (!damageElement.HaltVelocity) {
             if (AllowMovement) {
                 rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
             } else {

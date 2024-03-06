@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 internal class AnimationStrings
 {
+    internal static string climbing = "climbing";
     internal static string inMovement = "inMovement"; 
     internal static string running = "running"; 
     internal static string surfaced = "surfaced";

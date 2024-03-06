@@ -21,26 +21,24 @@ TagManager:
   - HealthBarSkeleton
   - HealthBarSkeleton2
   - Skeleton2
+  - Ladder
   - HealthBarTreeCreature2
   - HealthBarGoblin3
   - HealthBarGoblin2
   - HealthBarGoblin
   - HealthBarTreeCreature
   - HealthBarTreeCreature3
-  - TreeCreature3
-  - TreeCreature2
   - Goblin2
+  - TreeCreature3
   - Goblin3
-  - TreeCreature
   - Goblin
+  - TreeCreature2
+  - TreeCreature
+  - Skeleton3
+  - HealthBarSkeleton3
   - SoundText
-  - HealthBarGoblin4
-  - HealthBarGoblin5
-  - Goblin4
-  - Goblin5
-  - Lift
-  - Goblin6
-  - HealthBarGoblin6
+  - Skeleton4
+  - HealthBarSkeleton4
   layers:
   - Default
   - TransparentFX
@@ -57,7 +55,7 @@ TagManager:
   - ItemPickup
   - HarmfulObjects
   - NPCs
-  - Checkpoints
+  - 
   - 
   - 
   - 

@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public float idleSpeed = 0f;
     public float airWalkSpeed = 1f;
     //public int lastCheckpoint = 0;
+    public float acceleration = 10f;
+    private bool isLadder;
     TouchingDirections touchingDirections;
     DamageElement damageElement;
     HealthBar healthBar;
@@ -62,6 +64,19 @@ public class PlayerController : MonoBehaviour
         
     }
     
+    //TODO: FInish climbing animation
+    [SerializeField]
+    private bool _climbing = false;
+    public bool Climbing
+    {
+        get { return _climbing; }
+        private set
+        {
+            _climbing = value;
+            animator.SetBool(AnimationStrings.climbing, value);
+        }
+    }
+
     [SerializeField]
     private bool _running = false;
     
@@ -136,14 +151,51 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void FixedUpdate() {
-        if (!damageElement.HaltVelocity) {
-            rb.velocity = new Vector2(moveInput.x * movementSpeed, rb.velocity.y);
+    private void FixedUpdate()
+    {
+        if (!damageElement.HaltVelocity)
+        {
+            float targetVelocityX = moveInput.x * movementSpeed;
+            float accelerationX = acceleration * Time.fixedDeltaTime;
+
+            if (touchingDirections.Surfaced)
+            {
+                rb.velocity = Vector2.MoveTowards(rb.velocity, new Vector2(targetVelocityX, rb.velocity.y), accelerationX);
+            }
+            else
+            {
+                rb.velocity = Vector2.MoveTowards(rb.velocity, new Vector2(targetVelocityX * 2, rb.velocity.y), accelerationX);
+            }
+
+            animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
         }
-        animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
-       
+
+        if (isLadder)
+        {
+            float verticalInput = Input.GetAxis("Vertical");
+            Vector2 climbVelocity = new Vector2(rb.velocity.x, verticalInput * 5);
+            rb.velocity = climbVelocity;
+        }
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ladder"))
+        {
+            isLadder = true;
+            rb.gravityScale = 0;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ladder"))
+        {
+            isLadder = false;
+            rb.gravityScale = 1;
+        }
+    }
+
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
@@ -174,7 +226,7 @@ public class PlayerController : MonoBehaviour
         }
         
     }
-    
+
     public void OnJump(InputAction.CallbackContext context)
     {
         if (context.started && touchingDirections.Surfaced && AllowMovement) {
