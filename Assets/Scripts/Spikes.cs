@@ -25,7 +25,7 @@ public class Spikes: MonoBehaviour
             {
                 if (spikeSound != null)
                 {
-                    AudioSource.PlayClipAtPoint(spikeSound, transform.position);
+                    AudioSource.PlayClipAtPoint(spikeSound, player.transform.position);
                 }
                  if (bloodParticles != null)
                 {

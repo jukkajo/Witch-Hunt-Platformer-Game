@@ -9,6 +9,8 @@ public class LevelChange : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D detected) {
         if(detected.tag == "Player") {
+            PlayerPrefs.DeleteKey("PlayerX");
+            PlayerPrefs.DeleteKey("PlayerY");
             SceneManager.LoadScene(sceneNumber, LoadSceneMode.Single);
         }
     } 

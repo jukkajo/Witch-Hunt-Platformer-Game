@@ -36,6 +36,9 @@ TagManager:
   - TreeCreature
   - Skeleton3
   - HealthBarSkeleton3
+  - SoundText
+  - Skeleton4
+  - HealthBarSkeleton4
   layers:
   - Default
   - TransparentFX
