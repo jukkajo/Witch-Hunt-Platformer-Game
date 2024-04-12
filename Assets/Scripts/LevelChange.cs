@@ -12,6 +12,7 @@ public class LevelChange : MonoBehaviour
             PlayerPrefs.DeleteKey("PlayerX");
             PlayerPrefs.DeleteKey("PlayerY");
             SceneManager.LoadScene(sceneNumber, LoadSceneMode.Single);
+            Invoke("InitializeObjects", 1.0f);
         }
     } 
 

@@ -39,6 +39,7 @@ TagManager:
   - SoundText
   - Skeleton4
   - HealthBarSkeleton4
+  - Ground
   layers:
   - Default
   - TransparentFX

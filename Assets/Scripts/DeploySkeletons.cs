@@ -6,7 +6,6 @@ public class DeploySkeletons : MonoBehaviour
 {
      
     private void OnTriggerEnter2D(Collider2D detected) {
-        Debug.Log("Nekru");
         if(detected.tag == "Player") {
             
             GameObject targetObject = GameObject.FindWithTag("Skeleton");

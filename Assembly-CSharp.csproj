@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\LevelChange.cs" />
     <Compile Include="Assets\Scripts\ParallaxCamera.cs - Copy.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\EnemyTeleport.cs" />
     <Compile Include="Assets\Scripts\ProjectileLauncher.cs" />
     <Compile Include="Assets\Scripts\ParallaxBackground.cs - Copy.cs" />
     <Compile Include="Assets\Scripts\Spikes.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="Assets\Scripts\InGameMenu.cs" />
     <Compile Include="Assets\Scripts\RollingStone.cs" />
     <Compile Include="Assets\Scripts\StateMachiine\SetBooleanBehavior.cs" />
+    <Compile Include="Assets\Scripts\FallingSpike.cs" />
     <Compile Include="Assets\Scripts\ExtrudingSpike.cs" />
   </ItemGroup>
   <ItemGroup>

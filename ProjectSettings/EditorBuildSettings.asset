@@ -26,4 +26,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelDesert.unity
     guid: 1c7383d95e5c1674480bfa945760d273
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 82b9a29f075707d8681f8b9a5c217f0f, type: 2}
