@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\FlyingCreature.cs" />
     <Compile Include="Assets\Scripts\allowMovement.cs" />
     <Compile Include="Assets\Scripts\MainMenuController.cs" />
+    <Compile Include="Assets\Scripts\WitchBoss.cs" />
     <Compile Include="Assets\Scripts\MovePlatform.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\WaterDeath.cs" />

@@ -40,6 +40,8 @@ TagManager:
   - Skeleton4
   - HealthBarSkeleton4
   - Ground
+  - Witch
+  - HealthBarWitch
   layers:
   - Default
   - TransparentFX

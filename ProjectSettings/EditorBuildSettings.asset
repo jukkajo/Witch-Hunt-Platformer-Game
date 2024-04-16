@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelDesert.unity
     guid: 1c7383d95e5c1674480bfa945760d273
+  - enabled: 1
+    path: Assets/Scenes/LevelSwamp.unity
+    guid: 30c095b6ef2f1e6488ea351238dfe42b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 82b9a29f075707d8681f8b9a5c217f0f, type: 2}
