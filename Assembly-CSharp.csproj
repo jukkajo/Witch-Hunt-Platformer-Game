@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\WitchBoss.cs" />
     <Compile Include="Assets\Scripts\MovePlatform.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
+    <Compile Include="Assets\Scripts\MagicAttack.cs" />
     <Compile Include="Assets\Scripts\WaterDeath.cs" />
     <Compile Include="Assets\Scripts\PlayerPauseController.cs" />
     <Compile Include="Assets\Scripts\TreasurePickup.cs" />
@@ -101,9 +102,11 @@
     <Compile Include="Assets\Scripts\WeaponPickUp.cs" />
     <Compile Include="Assets\Scripts\TouchingDirections.cs" />
     <Compile Include="Assets\Scripts\DetectionArea.cs" />
+    <Compile Include="Assets\Scripts\BossDeathEvent.cs" />
     <Compile Include="Assets\Scripts\Events.cs" />
     <Compile Include="Assets\Scripts\HelpMenu.cs" />
     <Compile Include="Assets\Scripts\ImageFollow.cs" />
+    <Compile Include="Assets\Scripts\BossFightEvent.cs" />
     <Compile Include="Assets\Scripts\InGameMenu.cs" />
     <Compile Include="Assets\Scripts\RollingStone.cs" />
     <Compile Include="Assets\Scripts\StateMachiine\SetBooleanBehavior.cs" />
