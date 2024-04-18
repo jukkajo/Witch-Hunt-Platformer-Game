@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class BossFightEvent : MonoBehaviour
 {
-    public AudioClip evilLaughClip; // Evil laugh audio clip
-    public AudioClip bossMusic; // Boss fight music audio clip
-    public AudioSource musicSource; // Reference to the AudioSource playing the level music
+    public AudioClip evilLaughClip;
+    public AudioClip bossMusic;
+    public AudioSource musicSource;
 
-    private bool eventTriggered = false; // Flag to ensure the event is triggered only once
+    private bool eventTriggered = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -27,7 +27,7 @@ public class BossFightEvent : MonoBehaviour
                 // Play the boss fight music
                 musicSource.clip = bossMusic;
                 musicSource.loop = true;
-                musicSource.volume = 0.5f;
+                musicSource.volume = 0.2f;
                 musicSource.Play();
             }
 

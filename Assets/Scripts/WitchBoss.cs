@@ -164,6 +164,6 @@ public class WitchBoss : MonoBehaviour
     public void OnHit(int reduceByNumber, Vector2 moveBackwards)
     {
         healthBar.spriteChange();
-        rb.velocity = new Vector2(moveBackwards.x, rb.velocity.y + moveBackwards.y);
+        //rb.velocity = new Vector2(moveBackwards.x, rb.velocity.y + moveBackwards.y);
     }
 }

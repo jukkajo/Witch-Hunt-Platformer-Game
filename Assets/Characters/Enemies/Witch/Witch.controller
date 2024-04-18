@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 8300000, guid: 10afb45def0831847b1ac954cdf38d64, type: 3}
-  volumeLevel: 2
+  volumeLevel: 1
   playAfterDelay: 0
   playAtStateEnter: 0
   playWhenExit: 1
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 8300000, guid: 8525c2afa23c1b6f8abf05c2747502e8, type: 3}
-  volumeLevel: 1
+  volumeLevel: 0.7
   playAfterDelay: 0
   playAtStateEnter: 1
   playWhenExit: 0
@@ -454,8 +454,8 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0.6261833
-  m_TransitionOffset: 0
-  m_ExitTime: 0.19999999
+  m_TransitionOffset: 0.34832546
+  m_ExitTime: 0.19999997
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -473,7 +473,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1268422755335149050}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 7976666357727389668}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -488,3 +489,21 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &7976666357727389668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474f3402b6a23e00e87b9d105869fb64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 8300000, guid: 3d53c1474cce10b4480c3bf6c325b859, type: 3}
+  volumeLevel: 1
+  playAfterDelay: 0
+  playAtStateEnter: 1
+  playWhenExit: 0
+  delay: 0
