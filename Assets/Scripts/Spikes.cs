@@ -16,20 +16,23 @@ public class Spikes: MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.CompareTag("Player"))
+        Debug.Log("Object with tag: " + col.tag + " entered the spikes.");
+        if (col.CompareTag("Player"))
         {
+            Debug.Log("player has entered the spike");
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             DamageElement element = player.GetComponent<DamageElement>();
 
             if (element != null)
             {
+                Debug.Log("starting to do damage to player");
                 if (spikeSound != null)
                 {
                     AudioSource.PlayClipAtPoint(spikeSound, player.transform.position);
                 }
-                 if (bloodParticles != null)
+                if (bloodParticles != null)
                 {
-                    bloodParticles.transform.position = player.transform.position + new Vector3(0f, -0.8f, 0f); ;
+                    bloodParticles.transform.position = player.transform.position + new Vector3(0f, -0.8f, 0f);
                     bloodParticles.Play();
                 }
                 element.Hit(spikeDamage, knockBack);

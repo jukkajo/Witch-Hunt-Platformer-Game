@@ -7,13 +7,24 @@ public class LevelChange : MonoBehaviour
 {
     public int sceneNumber;
 
-    private void OnTriggerEnter2D(Collider2D detected) {
-        if(detected.tag == "Player") {
+    private void OnTriggerEnter2D(Collider2D detected)
+    {
+        if (detected.CompareTag("Player"))
+        {
             PlayerPrefs.DeleteKey("PlayerX");
             PlayerPrefs.DeleteKey("PlayerY");
-            SceneManager.LoadScene(sceneNumber, LoadSceneMode.Single);
-            Invoke("InitializeObjects", 1.0f);
+            StartCoroutine(LoadSceneAndWait(sceneNumber));
         }
-    } 
+    }
 
+    IEnumerator LoadSceneAndWait(int sceneNumber)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneNumber, LoadSceneMode.Single);
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+        yield return new WaitForSeconds(3f);
+        Debug.Log("Scene fully loaded, player position keys deleted.");
+    }
 }

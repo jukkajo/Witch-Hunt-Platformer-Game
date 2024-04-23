@@ -3,10 +3,10 @@ using System.Collections;
 
 public class MagicAttack : MonoBehaviour
 {
-    public int damage = 10; // Damage inflicted by the magic attack
-    public Vector2 knockBack = new Vector2(0, 0); // Knockback applied to the player
-    public AudioClip impactSound; // Sound played upon impact
-    public ParticleSystem impactParticles; // Particle system played upon impact
+    public int damage = 10;
+    public Vector2 knockBack = new Vector2(0, 0);
+    public AudioClip impactSound;
+    public ParticleSystem impactParticles;
     public float spinSpeed = 100f;
 
     private void Start()
