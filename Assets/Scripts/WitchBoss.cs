@@ -52,6 +52,10 @@ public class WitchBoss : MonoBehaviour
 
     void Update()
     {
+        if (player == null)
+        {
+            return;
+        }
         // Face the player by mirroring the sprite horizontally
         if (player.position.x < transform.position.x)
         {
