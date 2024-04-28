@@ -56,5 +56,10 @@ public class MainMenuController : MonoBehaviour
         creditsMenu.SetActive(true);
     }
     
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+    
 }
 
