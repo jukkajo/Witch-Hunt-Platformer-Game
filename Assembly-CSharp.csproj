@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\TouchingDirections.cs" />
     <Compile Include="Assets\Scripts\DetectionArea.cs" />
     <Compile Include="Assets\Scripts\BossDeathEvent.cs" />
+    <Compile Include="Assets\Scripts\PlayRandomSoundEffects.cs" />
     <Compile Include="Assets\Scripts\Events.cs" />
     <Compile Include="Assets\Scripts\HelpMenu.cs" />
     <Compile Include="Assets\Scripts\ImageFollow.cs" />
